@@ -73,7 +73,7 @@ public class Stack {
 	public static void main(String args[])
 	{
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the capacity of the stack :");
+		logger.log("Enter the capacity of the stack :");
 		int size = sc.nextInt();
 		Stack stack = new Stack(size);
 		int data;
