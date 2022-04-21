@@ -21,14 +21,14 @@ public class Stack {
 	  // push elements to the top of stack
 	  public void push(int x) {
 	    if (isFull()) {
-	      System.out.println("Stack OverFlow");
+	      logger.log("Stack OverFlow");
 
 	      // terminates the program
 	      System.exit(1);
 	    }
 
 	    // insert element on top of stack
-	    System.out.println("Inserting " + x);
+	    logger.log("Inserting " + x);
 	    arr[++top] = x;
 	  }
 
@@ -38,7 +38,7 @@ public class Stack {
 	    // if stack is empty
 	    // no element to pop
 	    if (isEmpty()) {
-	      System.out.println("STACK EMPTY");
+	      logger.log("STACK EMPTY");
 	      // terminates the program
 	      System.exit(1);
 	    }
@@ -65,7 +65,7 @@ public class Stack {
 	  // display elements of stack
 	  public void printStack() {
 	    for (int i = 0; i <= top; i++) {
-	      System.out.print(arr[i] + ", ");
+	      logger.log(arr[i] + ", ");
 	    }
 	  }
 	
@@ -81,16 +81,16 @@ public class Stack {
 		
 		do
 		{
-			System.out.println("1.Push");
-			System.out.println("2.pop");
-			System.out.println("3.count");
-			System.out.println("4.print");
-			System.out.println("Enter your option :");
+			logger.log("1.Push");
+			logger.log("2.pop");
+			logger.log("3.count");
+			logger.log("4.print");
+			logger.log("Enter your option :");
 			int option = sc.nextInt();
 			// pushing the element into the task
 			if(option == 1)
 			{
-				System.out.print("Enter the data to insert :");
+				logger.log("Enter the data to insert :");
 				data = sc.nextInt();
 				stack.push(data);
 			}
@@ -101,20 +101,20 @@ public class Stack {
 			}
 			else if(option == 3)
 			{
-				System.out.println(stack.getSize());
+				logger.log(stack.getSize());
 			}
 			// printing the stack
 			else if(option == 4)
 			{
-				System.out.print("Stack: ");
+				logger.log("Stack: ");
 				stack.printStack();
 			}
 			//invalid option
 			else
 			{
-				System.out.println("Invalid option");
+				logger.log("Invalid option");
 			}
-			System.out.println("Do you want to continue : Y/N ");
+			logger.log("Do you want to continue : Y/N ");
 			op = sc.next().charAt(0);
 			}while( op == 'y');	
 		
