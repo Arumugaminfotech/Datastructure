@@ -59,17 +59,17 @@ public class LinkedList {
  {
      Node currNode = list.head;
 
-     logger.log("\nLinkedList: ");
+     System.out.println("\nLinkedList: ");
 
      // Traverse through the LinkedList
      while (currNode != null) {
          // Print the data at current node
-         logger.log(currNode.data + " ");
+         System.out.println(currNode.data + " ");
 
          // Go to next node
          currNode = currNode.next;
      }
-     logger.log("\n");
+     Sysem.out.println("\n");
  }
 
  // **************DELETION BY KEY**************
@@ -89,7 +89,7 @@ public class LinkedList {
          list.head = currNode.next; // Changed head
 
          // Display the message
-         logger.log(key + " found and deleted");
+         System.out.println(key + " found and deleted");
 
          // Return the updated List
          return list;
@@ -118,7 +118,7 @@ public class LinkedList {
          prev.next = currNode.next;
 
          // Display the message
-         logger.log(key + " found and deleted");
+         System.out.println(key + " found and deleted");
      }
 
      //
@@ -129,7 +129,7 @@ public class LinkedList {
      // currNode should be null
      if (currNode == null) {
          // Display the message
-         logger.log(key + " not found");
+         System.out.println(key + " not found");
      }
 
      // return the List
@@ -154,7 +154,7 @@ public class LinkedList {
          list.head = currNode.next; // Changed head
 
          // Display the message
-         logger.log(
+         System.out.println(
              index + " position element deleted");
 
          // Return the updated List
@@ -180,7 +180,7 @@ public class LinkedList {
              prev.next = currNode.next;
 
              // Display the message
-             logger.log(
+             System.out.println(
                  index + " position element deleted");
              break;
          }
@@ -203,7 +203,7 @@ public class LinkedList {
      // In this case, the currNode should be null
      if (currNode == null) {
          // Display the message
-         logger.log(
+         System.out.println(
              index + " position element not found");
      }
 
