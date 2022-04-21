@@ -59,17 +59,17 @@ public class LinkedList {
  {
      Node currNode = list.head;
 
-     System.out.print("\nLinkedList: ");
+     logger.log("\nLinkedList: ");
 
      // Traverse through the LinkedList
      while (currNode != null) {
          // Print the data at current node
-         System.out.print(currNode.data + " ");
+         logger.log(currNode.data + " ");
 
          // Go to next node
          currNode = currNode.next;
      }
-     System.out.println("\n");
+     logger.log("\n");
  }
 
  // **************DELETION BY KEY**************
@@ -89,7 +89,7 @@ public class LinkedList {
          list.head = currNode.next; // Changed head
 
          // Display the message
-         System.out.println(key + " found and deleted");
+         logger.log(key + " found and deleted");
 
          // Return the updated List
          return list;
@@ -118,7 +118,7 @@ public class LinkedList {
          prev.next = currNode.next;
 
          // Display the message
-         System.out.println(key + " found and deleted");
+         logger.log(key + " found and deleted");
      }
 
      //
@@ -129,7 +129,7 @@ public class LinkedList {
      // currNode should be null
      if (currNode == null) {
          // Display the message
-         System.out.println(key + " not found");
+         logger.log(key + " not found");
      }
 
      // return the List
@@ -154,7 +154,7 @@ public class LinkedList {
          list.head = currNode.next; // Changed head
 
          // Display the message
-         System.out.println(
+         logger.log(
              index + " position element deleted");
 
          // Return the updated List
@@ -180,7 +180,7 @@ public class LinkedList {
              prev.next = currNode.next;
 
              // Display the message
-             System.out.println(
+             logger.log(
                  index + " position element deleted");
              break;
          }
@@ -203,7 +203,7 @@ public class LinkedList {
      // In this case, the currNode should be null
      if (currNode == null) {
          // Display the message
-         System.out.println(
+         logger.log(
              index + " position element not found");
      }
 
@@ -229,19 +229,19 @@ public class LinkedList {
      int op = sc.nextInt();
      if(op == 1)
      {
-    	 System.out.println("Enter the value to insert :");
+    	 logger.log("Enter the value to insert :");
     	 int value = sc.nextInt();
     	 list = list.insert(list, value);
      }
      else if(op == 2)
      {
-    	 System.out.println("Enter the key to delete :");
+    	 logger.log("Enter the key to delete :");
     	 int key = sc.nextInt();
     	 list = deleteByKey(list, key);
      }
      else if(op == 3)
      {
-    	 System.out.println("Enter the position to delete :");
+    	 logger.log("Enter the position to delete :");
     	 int pos = sc.nextInt();
     	 list = deleteAtPosition(list, pos);
      }
@@ -252,7 +252,7 @@ public class LinkedList {
      }
      else
      {
-    	System.out.println("Invalid option");
+    	logger.log("Invalid option");
      }
      System.out.println("Do you want to continue : Y/N");
      a = sc.next().charAt(0);
